@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1530544B29A7835C0054623C /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1530544A29A7835C0054623C /* LogInView.swift */; };
+		1530544F29A790000054623C /* LoginDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1530544E29A790000054623C /* LoginDetail.swift */; };
 		15CAAA53299E69ED00F4B197 /* StudyPalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAAA52299E69ED00F4B197 /* StudyPalApp.swift */; };
 		15CAAA55299E69ED00F4B197 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAAA54299E69ED00F4B197 /* ContentView.swift */; };
 		15CAAA57299E69EE00F4B197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15CAAA56299E69EE00F4B197 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1530544A29A7835C0054623C /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		1530544E29A790000054623C /* LoginDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDetail.swift; sourceTree = "<group>"; };
 		15CAAA4F299E69ED00F4B197 /* StudyPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CAAA52299E69ED00F4B197 /* StudyPalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPalApp.swift; sourceTree = "<group>"; };
 		15CAAA54299E69ED00F4B197 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,7 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				15CAAA52299E69ED00F4B197 /* StudyPalApp.swift */,
+				1530544A29A7835C0054623C /* LogInView.swift */,
 				15CAAA54299E69ED00F4B197 /* ContentView.swift */,
+				1530544E29A790000054623C /* LoginDetail.swift */,
 				15CAAA56299E69EE00F4B197 /* Assets.xcassets */,
 				15CAAA58299E69EE00F4B197 /* Preview Content */,
 			);
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1530544F29A790000054623C /* LoginDetail.swift in Sources */,
+				1530544B29A7835C0054623C /* LogInView.swift in Sources */,
 				15CAAA55299E69ED00F4B197 /* ContentView.swift in Sources */,
 				15CAAA53299E69ED00F4B197 /* StudyPalApp.swift in Sources */,
 			);
