@@ -31,19 +31,20 @@ struct LoginDetail: View {
                 .shadow(color: .gray, radius: 5, x: 5, y: 5)
             Spacer()
             TextField("Enter username...", text: $username)
-                .padding(8)
+                .padding(12)
                 .overlay(
                     RoundedRectangle(cornerRadius: 14)
                         .stroke(Color.black, lineWidth: 2)
                 )
         
             TextField("Enter password...", text: $password)
-                .padding(8)
+                .padding(12)
                 .overlay(
                     RoundedRectangle(cornerRadius: 14)
                         .stroke(Color.black, lineWidth: 2)
                 )
             Spacer()
+            
             Button(action: {
                
             }) {
