@@ -16,6 +16,9 @@ struct MainPage: View {
         NavigationStack {
            
             VStack{
+                
+                PathView()
+
                 Spacer()
                 Image("Logo")
                     .resizable()
@@ -26,8 +29,6 @@ struct MainPage: View {
                     .padding(.bottom)
                     .font(.system(size: 48))
                 
-                Rectangle()
-                    .frame(width: 400,height: 1)
                 
             }
         

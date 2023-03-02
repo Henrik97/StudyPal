@@ -12,9 +12,9 @@ struct LogInView: View {
     
     var body: some View {
         
-        VStack{
-            LoginDetail()
-           
+            VStack{
+                LoginDetail()
+            
 
 
             
