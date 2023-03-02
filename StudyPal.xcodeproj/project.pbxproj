@@ -69,11 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				15CAAA52299E69ED00F4B197 /* StudyPalApp.swift */,
-				1530544A29A7835C0054623C /* LogInView.swift */,
-				15CAAA54299E69ED00F4B197 /* ContentView.swift */,
-				1530544E29A790000054623C /* LoginDetail.swift */,
-				1530545029AF6DE50054623C /* MainPage.swift */,
-				1530545429AF933E0054623C /* PathView.swift */,
 				15CAAA56299E69EE00F4B197 /* Assets.xcassets */,
 				15CAAA58299E69EE00F4B197 /* Preview Content */,
 			);
@@ -92,6 +87,11 @@
 			isa = PBXGroup;
 			children = (
 				9163457329A8868600523378 /* TagView.swift */,
+				15CAAA54299E69ED00F4B197 /* ContentView.swift */,
+				1530544A29A7835C0054623C /* LogInView.swift */,
+				1530544E29A790000054623C /* LoginDetail.swift */,
+				1530545029AF6DE50054623C /* MainPage.swift */,
+				1530545429AF933E0054623C /* PathView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
