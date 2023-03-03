@@ -11,14 +11,28 @@ struct LogInView: View {
 
     
     var body: some View {
-        
+        NavigationStack{
             VStack{
                 LoginDetail()
+                
+                NavigationLink(destination: SignUpView()){
+                        Text("Log In")
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .font(.system(size: 20))
+                            .padding()
+                            .foregroundColor(.white)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 25)
+                                    .stroke(Color.white, lineWidth: 2))
+                        
+                    
+                }.background(Color.black)
+                    .cornerRadius(25)
+                    .padding(.bottom)
             
-
-
-            
-        }.padding()
+                
+            }.padding()
+        }
     }
 }
 
