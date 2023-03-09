@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 
 struct ContentView: View {
@@ -21,8 +22,14 @@ struct ContentView: View {
     @State var tag: String = ""
     
     
+    @State private var image = UIImage()
+    @State private var showSheet = false
+    
+    @StateObject var dataModel = DataModel()
+    
+    
+    
     let rows = [
-        GridItem(.fixed(100), spacing: 10),
         GridItem(.fixed(100), spacing: 10),
     ]
     
@@ -66,21 +73,15 @@ struct ContentView: View {
                 
                 Section(header: Text("Profile Information")){
                     
-                    Button {
-                        print("you have added a picture")
-                    } label: {
-                        Label( "add pictures", systemImage: "plus")
-                        
-                    }.tint(Color.black)
-                    
-                    LazyHGrid(rows: rows, spacing: 10){
-                        
-                        ForEach(1...6, id: \.self) { _ in
-                            Color.blue.frame(width:100).cornerRadius(10)
-                                .opacity(0.5)
-                            
+                  
+                        NavigationStack {
+                            GridView()
                         }
-                    }
+                        .environmentObject(dataModel)
+                        .frame(height: 200)
+                        .frame(width: 300)
+                    
+               
                     
                     HStack{
                         TextField("Add tags", text: $text)
@@ -93,7 +94,7 @@ struct ContentView: View {
                                     .strokeBorder(Color("Tag").opacity(0.2),lineWidth: 1))
                         
                         
-                        
+                       
                         
                         Button("add"){
                             tags.append(Tag(text: text))
@@ -102,21 +103,29 @@ struct ContentView: View {
                             .disabled(text == "")
                         
                     }
-                    TagView(maxLimit: 150, tags: $tags)
+                    TagView(maxLimit: 6, tags: $tags)
                     
                         .frame(height: 120)
-                        .padding(.top,20)
+                        .border(Color.gray)
+                    
+                    
                     
                     
                 }
+                .padding(.horizontal, 20)
+                
+                Button("create"){}
+                    .padding(.leading, 120.0)
+                    .buttonStyle(.borderedProminent)
+                
             }
-        }.navigationBarTitle("Profile Creation")
             
         }
-    
-    
+        
+    }
     
 }
+
 
     
         
