@@ -9,6 +9,11 @@ import SwiftUI
 import UIKit
 
 
+struct DaysOfStudy: Identifiable {
+    var id: String
+    var isChosen = false
+}
+
 struct ContentView: View {
     @State private var username: String = ""
     @State private var name: String = ""
@@ -16,6 +21,16 @@ struct ContentView: View {
     @State private var university: String = ""
     @State private var fieldOfStudy: String = ""
     @State private var degree: String = ""
+    @State private var timeOfDayPrefered: String = ""
+    @State var daysOfStudy = [
+        DaysOfStudy(id: "Monday", isChosen: false),
+        DaysOfStudy(id: "Tuesday", isChosen: false),
+        DaysOfStudy(id: "Wednesday", isChosen: false),
+        DaysOfStudy(id: "Thursday", isChosen: false),
+        DaysOfStudy(id: "Friday", isChosen: false),
+        DaysOfStudy(id: "Saturday", isChosen: false),
+        DaysOfStudy(id: "Sunday", isChosen: false)
+    ]
     
     @State var text: String = ""
     @State var tags: [Tag] = []
@@ -69,65 +84,90 @@ struct ContentView: View {
                         Text("PHD").tag("4")
                     })
                     
-                }
-                
-                Section(header: Text("Profile Information")){
+                    Picker("Prefered Time of Day", selection: $timeOfDayPrefered,
+                           content: {
+                        Text("Early Bird").tag("1")
+                        Text("Night Owl").tag("2")
+                        Text("No Prefernce").tag("3")
+                        
+                    })
                     
-                  
+                    
+                    
+                    Section{
+                        ForEach($daysOfStudy) { $day in
+                            
+                            
+                            Toggle(day.id, isOn: $day.isChosen)
+                            
+                            
+                        }
+                        
+                    }
+                    Section{
+                        Toggle("All days", sources: $daysOfStudy, isOn: \.isChosen)
+                    }
+                }
+                    
+                    
+                    
+                    Section(header: Text("Profile Information")){
+                        
+                        
                         NavigationStack {
                             GridView()
                         }
                         .environmentObject(dataModel)
                         .frame(height: 200)
                         .frame(width: 300)
-                    
-               
-                    
-                    HStack{
-                        TextField("Add tags", text: $text)
-                            .font(.title3)
-                            .padding(.vertical,10)
-                            .padding(.horizontal)
-                            .background(
-                                
-                                RoundedRectangle(cornerRadius: 8)
-                                    .strokeBorder(Color("Tag").opacity(0.2),lineWidth: 1))
                         
                         
-                       
                         
-                        Button("add"){
-                            tags.append(Tag(text: text))
-                            text = ""
-                        }.buttonStyle(.borderedProminent)
-                            .disabled(text == "")
+                        HStack{
+                            TextField("Add tags", text: $text)
+                                .font(.title3)
+                                .padding(.vertical,10)
+                                .padding(.horizontal)
+                                .background(
+                                    
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .strokeBorder(Color("Tag").opacity(0.2),lineWidth: 1))
+                            
+                            
+                            
+                            
+                            Button("add"){
+                                tags.append(Tag(text: text))
+                                text = ""
+                            }.buttonStyle(.borderedProminent)
+                                .disabled(text == "")
+                            
+                        }
+                        TagView(maxLimit: 6, tags: $tags)
+                        
+                            .frame(height: 120)
+                            .border(Color.gray)
+                        
+                        
+                        
                         
                     }
-                    TagView(maxLimit: 6, tags: $tags)
+                    .padding(.horizontal, 20)
                     
-                        .frame(height: 120)
-                        .border(Color.gray)
-                    
-                    
-                    
+                    Button("create"){}
+                        .padding(.leading, 120.0)
+                        .buttonStyle(.borderedProminent)
                     
                 }
-                .padding(.horizontal, 20)
                 
-                Button("create"){}
-                    .padding(.leading, 120.0)
-                    .buttonStyle(.borderedProminent)
+                
                 
             }
             
         }
-        
     }
     
-}
 
-
-    
         
     
     struct ContentView_Previews: PreviewProvider {
