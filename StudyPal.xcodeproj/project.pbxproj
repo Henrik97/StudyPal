@@ -11,7 +11,14 @@
 		1530544F29A790000054623C /* LoginDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1530544E29A790000054623C /* LoginDetail.swift */; };
 		1530545129AF6DE50054623C /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1530545029AF6DE50054623C /* MainPage.swift */; };
 		1530545529AF933E0054623C /* PathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1530545429AF933E0054623C /* PathView.swift */; };
+		15339A6929C8AA4D00ADC425 /* googleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15339A6829C8AA4D00ADC425 /* googleSignIn.swift */; };
+		15339A6C29C8ABEB00ADC425 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 15339A6B29C8ABEB00ADC425 /* GoogleSignIn */; };
+		15339A6E29C8ABEB00ADC425 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 15339A6D29C8ABEB00ADC425 /* GoogleSignInSwift */; };
+		15339A7029C8B3D100ADC425 /* Application_utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15339A6F29C8B3D100ADC425 /* Application_utility.swift */; };
 		158A705D29B0EDB600B83574 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158A705C29B0EDB600B83574 /* SignUpView.swift */; };
+		158A705F29C358D100B83574 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 158A705E29C358D100B83574 /* GoogleService-Info.plist */; };
+		158A706229C359A800B83574 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 158A706129C359A800B83574 /* FirebaseAuth */; };
+		158A706429C359A800B83574 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 158A706329C359A800B83574 /* FirebaseFirestore */; };
 		15CAAA53299E69ED00F4B197 /* StudyPalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAAA52299E69ED00F4B197 /* StudyPalApp.swift */; };
 		15CAAA55299E69ED00F4B197 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAAA54299E69ED00F4B197 /* ContentView.swift */; };
 		15CAAA57299E69EE00F4B197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15CAAA56299E69EE00F4B197 /* Assets.xcassets */; };
@@ -26,7 +33,11 @@
 		1530544E29A790000054623C /* LoginDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDetail.swift; sourceTree = "<group>"; };
 		1530545029AF6DE50054623C /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		1530545429AF933E0054623C /* PathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathView.swift; sourceTree = "<group>"; };
+		15339A6829C8AA4D00ADC425 /* googleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleSignIn.swift; sourceTree = "<group>"; };
+		15339A6F29C8B3D100ADC425 /* Application_utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application_utility.swift; sourceTree = "<group>"; };
+		15339A7129C8BCB000ADC425 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		158A705C29B0EDB600B83574 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		158A705E29C358D100B83574 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		15CAAA4F299E69ED00F4B197 /* StudyPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CAAA52299E69ED00F4B197 /* StudyPalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPalApp.swift; sourceTree = "<group>"; };
 		15CAAA54299E69ED00F4B197 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,16 +53,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				158A706229C359A800B83574 /* FirebaseAuth in Frameworks */,
+				158A706429C359A800B83574 /* FirebaseFirestore in Frameworks */,
+				15339A6C29C8ABEB00ADC425 /* GoogleSignIn in Frameworks */,
+				15339A6E29C8ABEB00ADC425 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15339A6729C8AA2300ADC425 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				15339A6829C8AA4D00ADC425 /* googleSignIn.swift */,
+				15339A6F29C8B3D100ADC425 /* Application_utility.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		15CAAA46299E69ED00F4B197 = {
 			isa = PBXGroup;
 			children = (
 				9163457529ACF66400523378 /* View.xib */,
+				15339A6729C8AA2300ADC425 /* ViewModels */,
 				9163457029A8864F00523378 /* Model */,
 				9163456F29A8863C00523378 /* View */,
 				15CAAA51299E69ED00F4B197 /* StudyPal */,
@@ -70,7 +95,9 @@
 		15CAAA51299E69ED00F4B197 /* StudyPal */ = {
 			isa = PBXGroup;
 			children = (
+				15339A7129C8BCB000ADC425 /* Info.plist */,
 				15CAAA52299E69ED00F4B197 /* StudyPalApp.swift */,
+				158A705E29C358D100B83574 /* GoogleService-Info.plist */,
 				15CAAA56299E69EE00F4B197 /* Assets.xcassets */,
 				15CAAA58299E69EE00F4B197 /* Preview Content */,
 			);
@@ -123,6 +150,12 @@
 			dependencies = (
 			);
 			name = StudyPal;
+			packageProductDependencies = (
+				158A706129C359A800B83574 /* FirebaseAuth */,
+				158A706329C359A800B83574 /* FirebaseFirestore */,
+				15339A6B29C8ABEB00ADC425 /* GoogleSignIn */,
+				15339A6D29C8ABEB00ADC425 /* GoogleSignInSwift */,
+			);
 			productName = StudyPal;
 			productReference = 15CAAA4F299E69ED00F4B197 /* StudyPal.app */;
 			productType = "com.apple.product-type.application";
@@ -151,6 +184,10 @@
 				Base,
 			);
 			mainGroup = 15CAAA46299E69ED00F4B197;
+			packageReferences = (
+				158A706029C359A800B83574 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				15339A6A29C8ABEB00ADC425 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = 15CAAA50299E69ED00F4B197 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -166,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15CAAA5A299E69EE00F4B197 /* Preview Assets.xcassets in Resources */,
+				158A705F29C358D100B83574 /* GoogleService-Info.plist in Resources */,
 				9163457629ACF66400523378 /* View.xib in Resources */,
 				15CAAA57299E69EE00F4B197 /* Assets.xcassets in Resources */,
 			);
@@ -182,8 +220,10 @@
 				1530544F29A790000054623C /* LoginDetail.swift in Sources */,
 				1530544B29A7835C0054623C /* LogInView.swift in Sources */,
 				1530545529AF933E0054623C /* PathView.swift in Sources */,
+				15339A7029C8B3D100ADC425 /* Application_utility.swift in Sources */,
 				9163457229A8866800523378 /* Tag.swift in Sources */,
 				15CAAA55299E69ED00F4B197 /* ContentView.swift in Sources */,
+				15339A6929C8AA4D00ADC425 /* googleSignIn.swift in Sources */,
 				15CAAA53299E69ED00F4B197 /* StudyPalApp.swift in Sources */,
 				158A705D29B0EDB600B83574 /* SignUpView.swift in Sources */,
 				9163457429A8868600523378 /* TagView.swift in Sources */,
@@ -317,6 +357,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"StudyPal/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StudyPal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -345,6 +386,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"StudyPal/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StudyPal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -385,6 +427,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		15339A6A29C8ABEB00ADC425 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		158A706029C359A800B83574 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		15339A6B29C8ABEB00ADC425 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15339A6A29C8ABEB00ADC425 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		15339A6D29C8ABEB00ADC425 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 15339A6A29C8ABEB00ADC425 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		158A706129C359A800B83574 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 158A706029C359A800B83574 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		158A706329C359A800B83574 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 158A706029C359A800B83574 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15CAAA47299E69ED00F4B197 /* Project object */;
 }

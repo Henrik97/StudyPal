@@ -12,7 +12,7 @@ struct SignUpView: View {
     @State private var showingEmail = true
     @State private var email: String = ""
     @State private var phoneNumber: String = ""
-    
+    @StateObject private var vm = google_signin()
 
     
     var body: some View {
@@ -34,7 +34,6 @@ struct SignUpView: View {
                    label: {
                 Text("E-mail/Phone Number ")
                 
-
             })
             
             if showingEmail {
@@ -85,29 +84,30 @@ struct SignUpView: View {
                     path.addLine(to: CGPoint(x: 400, y: 100))
                 }
                 .stroke(style: StrokeStyle( lineWidth: 1, dash: [5]))
+            
                 
-                Button{}label:{
-                    Label("Continue with Google", systemImage: "google")
-
-                }.background(Color.green)
-                    .clipShape(Capsule())
-
-                Button{}label:{
-                    Label("Continue with Facebook", systemImage: "google")
-                }
-                .background(Color.green)
-                    .clipShape(Capsule())
-                
-                Button{}label:{
-                    Label("Continue with Apple", systemImage: "google")
-                }.background(Color.green)
-                    .clipShape(Capsule())
-                Spacer()
+                Button{
+                    vm.signInWithGoogle()
+                } label: {
+                    Text("Continue With Google")
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .font(.system(size: 18))
+                            .padding()
+                            .foregroundColor(.white)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 25)
+                                    .stroke(Color.white, lineWidth: 2)
+                        )
+                    }
+                    .background(Color.black)
+                    .cornerRadius(25)
             }
             
             NavigationLink(destination: LogInView()){
                 Text("Already have an account?")
             }
+            
+       
         }
     }
 }

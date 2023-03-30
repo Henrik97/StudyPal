@@ -45,7 +45,7 @@ struct MainPage: View {
                             RoundedRectangle(cornerRadius: 25)
                                 .stroke(Color.white, lineWidth: 2))
     
-                }.background(Color.green)
+                }.background(Color.black)
                     .cornerRadius(25)
                 
                 NavigationLink(destination: SignUpView()){
