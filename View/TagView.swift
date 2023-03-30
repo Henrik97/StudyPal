@@ -18,11 +18,11 @@ struct TagView: View {
   
             
             ScrollView(.vertical, showsIndicators: false) {
-                VStack(alignment: .leading, spacing: 10){
+                VStack(alignment: .leading, spacing: 2){
                     
                     ForEach(getRows(),id: \.self ) {rows in
                         
-                        HStack(spacing: 6)
+                        HStack(spacing: 3)
                         {
                             ForEach(rows){row in
                                 
@@ -35,10 +35,7 @@ struct TagView: View {
                 .padding(.vertical)
             }
             .frame(maxWidth: .infinity)
-            .background(
-                RoundedRectangle(cornerRadius: 8)
-                    .strokeBorder(Color.black,lineWidth: 2)
-            )
+            
         }
         .onChange(of: tags) { newValue in
             
@@ -54,8 +51,6 @@ struct TagView: View {
             
             // updating size
             
-            print("test")
-            
             tags [getIndex(tag: last)].size = size.width
         }
         
@@ -70,7 +65,7 @@ struct TagView: View {
             .padding(.vertical, 8)
             .background(
                 Capsule()
-                    .fill(Color.blue)
+                    .fill(Color.gray)
             )
             .foregroundColor(Color.black)
         
