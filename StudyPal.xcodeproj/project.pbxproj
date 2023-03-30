@@ -24,6 +24,11 @@
 		9163458629BA49D900523378 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9163458529BA49D900523378 /* GridView.swift */; };
 		9163458829BA4B7400523378 /* FileManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9163458729BA4B7400523378 /* FileManagerExtensions.swift */; };
 		9163458B29BA4EA000523378 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9163458A29BA4EA000523378 /* DetailView.swift */; };
+		916345AA29D5B7ED00523378 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916345A929D5B7ED00523378 /* User.swift */; };
+		916345AC29D5B87500523378 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916345AB29D5B87500523378 /* MainView.swift */; };
+		916345AE29D5B8E600523378 /* SwipePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916345AD29D5B8E600523378 /* SwipePage.swift */; };
+		916345B029D5B90D00523378 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916345AF29D5B90D00523378 /* CardView.swift */; };
+		916345B229D5B98D00523378 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916345B129D5B98D00523378 /* ChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +50,11 @@
 		9163458529BA49D900523378 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		9163458729BA4B7400523378 /* FileManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtensions.swift; sourceTree = "<group>"; };
 		9163458A29BA4EA000523378 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		916345A929D5B7ED00523378 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		916345AB29D5B87500523378 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		916345AD29D5B8E600523378 /* SwipePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipePage.swift; sourceTree = "<group>"; };
+		916345AF29D5B90D00523378 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		916345B129D5B98D00523378 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +99,9 @@
 				1530545429AF933E0054623C /* PathView.swift */,
 				15CAAA56299E69EE00F4B197 /* Assets.xcassets */,
 				15CAAA58299E69EE00F4B197 /* Preview Content */,
+				916345AB29D5B87500523378 /* MainView.swift */,
+				916345AD29D5B8E600523378 /* SwipePage.swift */,
+				916345B129D5B98D00523378 /* ChatView.swift */,
 			);
 			path = StudyPal;
 			sourceTree = "<group>";
@@ -105,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				9163457329A8868600523378 /* TagView.swift */,
+				916345AF29D5B90D00523378 /* CardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,6 +128,7 @@
 			children = (
 				9163457129A8866800523378 /* Tag.swift */,
 				9163457C29BA489000523378 /* Item.swift */,
+				916345A929D5B7ED00523378 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,13 +227,18 @@
 				9163458829BA4B7400523378 /* FileManagerExtensions.swift in Sources */,
 				9163458B29BA4EA000523378 /* DetailView.swift in Sources */,
 				1530545129AF6DE50054623C /* MainPage.swift in Sources */,
+				916345AA29D5B7ED00523378 /* User.swift in Sources */,
 				9163458429BA49C000523378 /* GridItemView.swift in Sources */,
 				1530544F29A790000054623C /* LoginDetail.swift in Sources */,
+				916345B029D5B90D00523378 /* CardView.swift in Sources */,
 				1530544B29A7835C0054623C /* LogInView.swift in Sources */,
 				1530545529AF933E0054623C /* PathView.swift in Sources */,
 				9163458229BA493600523378 /* DataModel.swift in Sources */,
 				9163457229A8866800523378 /* Tag.swift in Sources */,
+				916345B229D5B98D00523378 /* ChatView.swift in Sources */,
+				916345AC29D5B87500523378 /* MainView.swift in Sources */,
 				15CAAA55299E69ED00F4B197 /* ProfileCreateView.swift in Sources */,
+				916345AE29D5B8E600523378 /* SwipePage.swift in Sources */,
 				15CAAA53299E69ED00F4B197 /* StudyPalApp.swift in Sources */,
 				9163457B29B90B4700523378 /* PhotoPicker.swift in Sources */,
 				9163458629BA49D900523378 /* GridView.swift in Sources */,

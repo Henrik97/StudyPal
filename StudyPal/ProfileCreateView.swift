@@ -146,9 +146,6 @@ struct ContentView: View {
                         TagView(maxLimit: 6, tags: $tags)
                         
                             .frame(height: 120)
-                            .border(Color.gray)
-                        
-                        
                         
                         
                     }
@@ -157,6 +154,7 @@ struct ContentView: View {
                     Button("create"){}
                         .padding(.leading, 120.0)
                         .buttonStyle(.borderedProminent)
+                
                     
                 }
                 
