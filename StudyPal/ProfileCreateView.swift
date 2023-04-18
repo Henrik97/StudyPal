@@ -183,40 +183,45 @@ struct ProfileCreateView: View {
                 return Alert(title: Text("Sucess"), message: Text("Information Saved"), dismissButton: .default(Text("OK")))
             case .error:
                 return Alert(title: Text("Error"), message: Text("Please fill in all the required fields"), dismissButton: .default(Text("OK")))
-               
+                
             }
             
         }
     }
-        
-        
-        
-        func createProfile() {
-            self.showAlert = true
-            guard !email.isEmpty, !name.isEmpty else {
-                self.activeAlert = .error
-                print("test")
-                return
-            }
-            
-            self.activeAlert = .succes
-            
-            let userProfiile =
-            UserProfile(email: email, name: name, birthdate: birthdate)
     
-            db.collection("userProfiles").document(email).setData(userProfiile) {error in if let error = error {
-                    print("Failed to save profile : \(error)")
-                    self.activeAlert = .error
-            } else {
-                self.activeAlert = .succes
+    func addDate(){
+        
+    }
+    
+    func createProfile() {
+        self.showAlert = true
+        guard !email.isEmpty, !name.isEmpty else {
+            self.activeAlert = .error
+            print("test")
+            return
+        }
+        
+        self.activeAlert = .succes
+        
+        let userProfile =
+        ["email": email, "name": name, "birthdate": birthdate] as [String : Any]
+        
+        db.collection("userProfiles").addDocument(data: userProfile){ error in
+            if let error = error {
+                print("Failed to save profile: \(error)")
                 
             }
+            
         }
-    
+        
+    }
 }
+
 
     struct ProfileCreateView_Previews: PreviewProvider {
         static var previews: some View {
             ProfileCreateView()
         }
     }
+
+

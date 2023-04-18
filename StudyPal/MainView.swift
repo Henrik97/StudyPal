@@ -7,7 +7,9 @@
 
 import SwiftUI
 
+
 struct MainView: View {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some View {
         TabView(){
             ChatView()

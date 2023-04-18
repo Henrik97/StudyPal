@@ -15,6 +15,13 @@
 		15CAAA55299E69ED00F4B197 /* ProfileCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAAA54299E69ED00F4B197 /* ProfileCreateView.swift */; };
 		15CAAA57299E69EE00F4B197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15CAAA56299E69EE00F4B197 /* Assets.xcassets */; };
 		15CAAA5A299E69EE00F4B197 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15CAAA59299E69EE00F4B197 /* Preview Assets.xcassets */; };
+		915127F929EF3F6D00C114CE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 915127F829EF3F6D00C114CE /* FirebaseDatabase */; };
+		915127FB29EF3F6D00C114CE /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 915127FA29EF3F6D00C114CE /* FirebaseDatabaseSwift */; };
+		915127FD29EF3F6D00C114CE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 915127FC29EF3F6D00C114CE /* FirebaseFirestore */; };
+		915127FF29EF3F6D00C114CE /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 915127FE29EF3F6D00C114CE /* FirebaseFirestoreCombine-Community */; };
+		9151280129EF3F6D00C114CE /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9151280029EF3F6D00C114CE /* FirebaseFirestoreSwift */; };
+		9151280329EF3F6D00C114CE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9151280229EF3F6D00C114CE /* FirebaseStorage */; };
+		9151280529EF3F6D00C114CE /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9151280429EF3F6D00C114CE /* FirebaseStorageCombine-Community */; };
 		9163457229A8866800523378 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9163457129A8866800523378 /* Tag.swift */; };
 		9163457429A8868600523378 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9163457329A8868600523378 /* TagView.swift */; };
 		9163457B29B90B4700523378 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9163457A29B90B4700523378 /* PhotoPicker.swift */; };
@@ -64,6 +71,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9151280129EF3F6D00C114CE /* FirebaseFirestoreSwift in Frameworks */,
+				9151280529EF3F6D00C114CE /* FirebaseStorageCombine-Community in Frameworks */,
+				915127FB29EF3F6D00C114CE /* FirebaseDatabaseSwift in Frameworks */,
+				915127FF29EF3F6D00C114CE /* FirebaseFirestoreCombine-Community in Frameworks */,
+				915127F929EF3F6D00C114CE /* FirebaseDatabase in Frameworks */,
+				915127FD29EF3F6D00C114CE /* FirebaseFirestore in Frameworks */,
+				9151280329EF3F6D00C114CE /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +186,15 @@
 			dependencies = (
 			);
 			name = StudyPal;
+			packageProductDependencies = (
+				915127F829EF3F6D00C114CE /* FirebaseDatabase */,
+				915127FA29EF3F6D00C114CE /* FirebaseDatabaseSwift */,
+				915127FC29EF3F6D00C114CE /* FirebaseFirestore */,
+				915127FE29EF3F6D00C114CE /* FirebaseFirestoreCombine-Community */,
+				9151280029EF3F6D00C114CE /* FirebaseFirestoreSwift */,
+				9151280229EF3F6D00C114CE /* FirebaseStorage */,
+				9151280429EF3F6D00C114CE /* FirebaseStorageCombine-Community */,
+			);
 			productName = StudyPal;
 			productReference = 15CAAA4F299E69ED00F4B197 /* StudyPal.app */;
 			productType = "com.apple.product-type.application";
@@ -200,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 15CAAA46299E69ED00F4B197;
+			packageReferences = (
+				915127F729EF3F6D00C114CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 15CAAA50299E69ED00F4B197 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -445,6 +471,55 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		915127F729EF3F6D00C114CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		915127F829EF3F6D00C114CE /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 915127F729EF3F6D00C114CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		915127FA29EF3F6D00C114CE /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 915127F729EF3F6D00C114CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		915127FC29EF3F6D00C114CE /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 915127F729EF3F6D00C114CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		915127FE29EF3F6D00C114CE /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 915127F729EF3F6D00C114CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		9151280029EF3F6D00C114CE /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 915127F729EF3F6D00C114CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		9151280229EF3F6D00C114CE /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 915127F729EF3F6D00C114CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		9151280429EF3F6D00C114CE /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 915127F729EF3F6D00C114CE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15CAAA47299E69ED00F4B197 /* Project object */;
 }
