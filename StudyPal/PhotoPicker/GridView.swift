@@ -59,7 +59,7 @@ struct GridView: View {
                     withAnimation { isEditing.toggle() }
                 }
             }
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem {
                 Button {
                     isAddingPhoto = true
                 } label: {

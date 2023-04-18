@@ -21,7 +21,7 @@ struct MainView: View {
                     Text("Match")
                 }
             
-            ContentView()
+            ProfileView()
                 .tabItem{
                     Image(systemName: "person.fill")
                     Text("Profile")
@@ -37,3 +37,4 @@ struct MainView_Previews: PreviewProvider {
         MainView()
     }
 }
+
