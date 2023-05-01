@@ -32,10 +32,9 @@ struct MainPage: View {
                 
             }
         
-            
             VStack{
                 Spacer()
-                NavigationLink(destination: LoginDetail()){
+                NavigationLink(destination: LogInView()){
                     
                     Text("Log In")
                         .frame(minWidth: 0, maxWidth: .infinity)
@@ -45,21 +44,30 @@ struct MainPage: View {
                         .overlay(
                             RoundedRectangle(cornerRadius: 25)
                                 .stroke(Color.white, lineWidth: 2))
-                    
+    
+                }.background(Color.black)
+                    .cornerRadius(25)
+                
+                NavigationLink(destination: SignUpView()){
+                        Text("Sign up")
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .font(.system(size: 20))
+                            .padding()
+                            .foregroundColor(.white)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 25)
+                                    .stroke(Color.white, lineWidth: 2))
+                        
                     
                 }.background(Color.black)
                     .cornerRadius(25)
-                Spacer()
+                    .padding(.bottom)
+                
             }
             
         }
-                
-                    
-                    
-                    
             
-            
-        }
+    }
     
 }
 
