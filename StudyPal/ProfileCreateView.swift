@@ -9,11 +9,6 @@ import SwiftUI
 import UIKit
 import Firebase
 
-struct UserProfile: Codable{
-    var email: String
-    var name: String
-    var birthdate: Date
-}
 
 private let db = Firestore.firestore()
 
@@ -29,6 +24,7 @@ struct ProfileCreateView: View {
     @State private var email: String = ""
     @State private var name: String = ""
     @State private var birthdate = Date()
+    @State private var age = 0
     @State private var university: String = ""
     @State private var fieldOfStudy: String = ""
     @State private var degree: String = ""
@@ -46,12 +42,6 @@ struct ProfileCreateView: View {
     @State var text: String = ""
     @State var tags: [Tag] = []
     @State var tag: String = ""
-    
-    
-    @State private var image = UIImage()
-    @State private var showSheet = false
-    
-    @StateObject var dataModel = DataModel()
     
     @State private var showAlert = false
     @State private var activeAlert: ActiveAlert = .error
@@ -106,7 +96,7 @@ struct ProfileCreateView: View {
                         
                     })
                     
-                    /*
+                    
                      
                      Section{
                      ForEach($daysOfStudy) { $day in
@@ -127,15 +117,9 @@ struct ProfileCreateView: View {
                      
                      Section(header: Text("Profile Information")){
                      
+                
                      
-                     NavigationStack {
-                     GridView()
-                     }
-                     .environmentObject(dataModel)
-                     .frame(height: 200)
-                     .frame(width: 300)
                      
-                     */
                     
                     
                     HStack{
@@ -152,6 +136,7 @@ struct ProfileCreateView: View {
                         
                         
                         Button("add"){
+                            
                             tags.append(Tag(text: text))
                             text = ""
                         }.buttonStyle(.borderedProminent)
@@ -189,11 +174,19 @@ struct ProfileCreateView: View {
         }
     }
     
+    func calculateAge(birthdate: Date) -> Int {
+        let calendar = Calendar.current
+        let currentDate = Date()
+        let age = calendar.dateComponents([.year], from: birthdate, to: currentDate)
+        
+        return age.year ?? 0
+    }
     func addDate(){
         
     }
     
     func createProfile() {
+        age = calculateAge(birthdate: birthdate)
         self.showAlert = true
         guard !email.isEmpty, !name.isEmpty else {
             self.activeAlert = .error
@@ -204,9 +197,9 @@ struct ProfileCreateView: View {
         self.activeAlert = .succes
         
         let userProfile =
-        ["email": email, "name": name, "birthdate": birthdate] as [String : Any]
+        ["email": email, "name": name, "age": age] as [String : Any]
         
-        db.collection("userProfiles").addDocument(data: userProfile){ error in
+        db.collection("userProfiles").document(email).setData(userProfile){ error in
             if let error = error {
                 print("Failed to save profile: \(error)")
                 

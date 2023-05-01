@@ -22,6 +22,10 @@
 		9151280129EF3F6D00C114CE /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9151280029EF3F6D00C114CE /* FirebaseFirestoreSwift */; };
 		9151280329EF3F6D00C114CE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9151280229EF3F6D00C114CE /* FirebaseStorage */; };
 		9151280529EF3F6D00C114CE /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9151280429EF3F6D00C114CE /* FirebaseStorageCombine-Community */; };
+		9151280729EF525200C114CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9151280629EF525200C114CE /* GoogleService-Info.plist */; };
+		9151280929EF5BAB00C114CE /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9151280829EF5BAB00C114CE /* UserProfile.swift */; };
+		9151280B29FA6C3800C114CE /* MembershipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9151280A29FA6C3800C114CE /* MembershipView.swift */; };
+		9151280D29FAC3D100C114CE /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9151280C29FAC3D100C114CE /* MediaView.swift */; };
 		9163457229A8866800523378 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9163457129A8866800523378 /* Tag.swift */; };
 		9163457429A8868600523378 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9163457329A8868600523378 /* TagView.swift */; };
 		9163457B29B90B4700523378 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9163457A29B90B4700523378 /* PhotoPicker.swift */; };
@@ -49,6 +53,10 @@
 		15CAAA54299E69ED00F4B197 /* ProfileCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCreateView.swift; sourceTree = "<group>"; };
 		15CAAA56299E69EE00F4B197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15CAAA59299E69EE00F4B197 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9151280629EF525200C114CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9151280829EF5BAB00C114CE /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		9151280A29FA6C3800C114CE /* MembershipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipView.swift; sourceTree = "<group>"; };
+		9151280C29FAC3D100C114CE /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
 		9163457129A8866800523378 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		9163457329A8868600523378 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		9163457A29B90B4700523378 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
@@ -106,6 +114,7 @@
 		15CAAA51299E69ED00F4B197 /* StudyPal */ = {
 			isa = PBXGroup;
 			children = (
+				9151280629EF525200C114CE /* GoogleService-Info.plist */,
 				9163457E29BA48D600523378 /* PhotoPicker */,
 				15CAAA52299E69ED00F4B197 /* StudyPalApp.swift */,
 				1530544A29A7835C0054623C /* LogInView.swift */,
@@ -119,6 +128,8 @@
 				916345AD29D5B8E600523378 /* SwipePage.swift */,
 				916345B129D5B98D00523378 /* ChatView.swift */,
 				916345B329D5C5D000523378 /* ProfileView.swift */,
+				9151280A29FA6C3800C114CE /* MembershipView.swift */,
+				9151280C29FAC3D100C114CE /* MediaView.swift */,
 			);
 			path = StudyPal;
 			sourceTree = "<group>";
@@ -136,6 +147,7 @@
 			children = (
 				9163457329A8868600523378 /* TagView.swift */,
 				916345AF29D5B90D00523378 /* CardView.swift */,
+				9151280829EF5BAB00C114CE /* UserProfile.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,6 +254,7 @@
 			files = (
 				15CAAA5A299E69EE00F4B197 /* Preview Assets.xcassets in Resources */,
 				15CAAA57299E69EE00F4B197 /* Assets.xcassets in Resources */,
+				9151280729EF525200C114CE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +268,9 @@
 				9163457D29BA489000523378 /* Item.swift in Sources */,
 				9163458829BA4B7400523378 /* FileManagerExtensions.swift in Sources */,
 				9163458B29BA4EA000523378 /* DetailView.swift in Sources */,
+				9151280B29FA6C3800C114CE /* MembershipView.swift in Sources */,
 				1530545129AF6DE50054623C /* MainPage.swift in Sources */,
+				9151280D29FAC3D100C114CE /* MediaView.swift in Sources */,
 				916345AA29D5B7ED00523378 /* User.swift in Sources */,
 				9163458429BA49C000523378 /* GridItemView.swift in Sources */,
 				1530544F29A790000054623C /* LoginDetail.swift in Sources */,
@@ -268,6 +283,7 @@
 				916345AC29D5B87500523378 /* MainView.swift in Sources */,
 				15CAAA55299E69ED00F4B197 /* ProfileCreateView.swift in Sources */,
 				916345AE29D5B8E600523378 /* SwipePage.swift in Sources */,
+				9151280929EF5BAB00C114CE /* UserProfile.swift in Sources */,
 				15CAAA53299E69ED00F4B197 /* StudyPalApp.swift in Sources */,
 				9163457B29B90B4700523378 /* PhotoPicker.swift in Sources */,
 				9163458629BA49D900523378 /* GridView.swift in Sources */,
