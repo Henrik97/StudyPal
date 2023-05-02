@@ -89,6 +89,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		152E2D6B2A01286C000DE387 /* LoginViews */ = {
+			isa = PBXGroup;
+			children = (
+				1530544A29A7835C0054623C /* LogInView.swift */,
+				1530544E29A790000054623C /* LoginDetail.swift */,
+				1530545429AF933E0054623C /* PathView.swift */,
+				158A705C29B0EDB600B83574 /* SignUpView.swift */,
+			);
+			path = LoginViews;
+			sourceTree = "<group>";
+		};
+		152E2D6C2A012A00000DE387 /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				9151280F2A01110300C114CE /* MainView.swift */,
+				915128112A01116000C114CE /* SwipeView.swift */,
+				915128132A0111B300C114CE /* SwipeCardView.swift */,
+				915128152A0111ED00C114CE /* ProfileView.swift */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
 		15339A6729C8AA2300ADC425 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,18 +174,12 @@
 		9163456F29A8863C00523378 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1578B8EF29DAF5DF00949914 /* ChatView */,
-				9163457329A8868600523378 /* TagView.swift */,
-				15CAAA54299E69ED00F4B197 /* ProfileCreateView.swift */,
-				1530544A29A7835C0054623C /* LogInView.swift */,
-				1530544E29A790000054623C /* LoginDetail.swift */,
 				1530545029AF6DE50054623C /* MainPage.swift */,
-				1530545429AF933E0054623C /* PathView.swift */,
-				158A705C29B0EDB600B83574 /* SignUpView.swift */,
-				9151280F2A01110300C114CE /* MainView.swift */,
-				915128112A01116000C114CE /* SwipeView.swift */,
-				915128132A0111B300C114CE /* SwipeCardView.swift */,
-				915128152A0111ED00C114CE /* ProfileView.swift */,
+				152E2D6B2A01286C000DE387 /* LoginViews */,
+				1578B8EF29DAF5DF00949914 /* ChatView */,
+				152E2D6C2A012A00000DE387 /* TabViews */,
+				15CAAA54299E69ED00F4B197 /* ProfileCreateView.swift */,
+				9163457329A8868600523378 /* TagView.swift */,
 				915128172A01120700C114CE /* MemberView.swift */,
 				915128192A01122900C114CE /* MediaView.swift */,
 			);

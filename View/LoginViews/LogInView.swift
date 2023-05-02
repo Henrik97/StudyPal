@@ -15,7 +15,7 @@ struct LogInView: View {
             VStack{
                 LoginDetail()
                 
-                NavigationLink(destination: MainChatView()){
+                NavigationLink(destination: MainView()){
                         Text("Log In")
                             .frame(minWidth: 0, maxWidth: .infinity)
                             .font(.system(size: 20))
