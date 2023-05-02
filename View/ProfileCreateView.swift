@@ -195,14 +195,15 @@ struct ProfileCreateView: View {
         }
         
         self.activeAlert = .succes
-        
+        if let currentEmail = Auth.auth().currentUser?.email{
         let userProfile =
         ["email": email, "name": name, "age": age] as [String : Any]
         
-        db.collection("userProfiles").document(email).setData(userProfile){ error in
-            if let error = error {
-                print("Failed to save profile: \(error)")
-                
+            db.collection("userProfiles").document(currentEmail).setData(userProfile){ error in
+                if let error = error {
+                    print("Failed to save profile: \(error)")
+                    
+                }
             }
             
         }
