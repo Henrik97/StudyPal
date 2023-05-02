@@ -27,9 +27,15 @@
 		158A705D29B0EDB600B83574 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158A705C29B0EDB600B83574 /* SignUpView.swift */; };
 		158A705F29C358D100B83574 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 158A705E29C358D100B83574 /* GoogleService-Info.plist */; };
 		15CAAA53299E69ED00F4B197 /* StudyPalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAAA52299E69ED00F4B197 /* StudyPalApp.swift */; };
-		15CAAA55299E69ED00F4B197 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAAA54299E69ED00F4B197 /* ContentView.swift */; };
+		15CAAA55299E69ED00F4B197 /* ProfileCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CAAA54299E69ED00F4B197 /* ProfileCreateView.swift */; };
 		15CAAA57299E69EE00F4B197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15CAAA56299E69EE00F4B197 /* Assets.xcassets */; };
 		15CAAA5A299E69EE00F4B197 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15CAAA59299E69EE00F4B197 /* Preview Assets.xcassets */; };
+		915128102A01110300C114CE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9151280F2A01110300C114CE /* MainView.swift */; };
+		915128122A01116000C114CE /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915128112A01116000C114CE /* SwipeView.swift */; };
+		915128142A0111B300C114CE /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915128132A0111B300C114CE /* SwipeCardView.swift */; };
+		915128162A0111ED00C114CE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915128152A0111ED00C114CE /* ProfileView.swift */; };
+		915128182A01120700C114CE /* MemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915128172A01120700C114CE /* MemberView.swift */; };
+		9151281A2A01122900C114CE /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915128192A01122900C114CE /* MediaView.swift */; };
 		9163457229A8866800523378 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9163457129A8866800523378 /* Tag.swift */; };
 		9163457429A8868600523378 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9163457329A8868600523378 /* TagView.swift */; };
 		9163457629ACF66400523378 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9163457529ACF66400523378 /* View.xib */; };
@@ -53,9 +59,15 @@
 		158A705E29C358D100B83574 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		15CAAA4F299E69ED00F4B197 /* StudyPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15CAAA52299E69ED00F4B197 /* StudyPalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyPalApp.swift; sourceTree = "<group>"; };
-		15CAAA54299E69ED00F4B197 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		15CAAA54299E69ED00F4B197 /* ProfileCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCreateView.swift; sourceTree = "<group>"; };
 		15CAAA56299E69EE00F4B197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15CAAA59299E69EE00F4B197 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9151280F2A01110300C114CE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		915128112A01116000C114CE /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		915128132A0111B300C114CE /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
+		915128152A0111ED00C114CE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		915128172A01120700C114CE /* MemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberView.swift; sourceTree = "<group>"; };
+		915128192A01122900C114CE /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
 		9163457129A8866800523378 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		9163457329A8868600523378 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		9163457529ACF66400523378 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
@@ -142,12 +154,18 @@
 			children = (
 				1578B8EF29DAF5DF00949914 /* ChatView */,
 				9163457329A8868600523378 /* TagView.swift */,
-				15CAAA54299E69ED00F4B197 /* ContentView.swift */,
+				15CAAA54299E69ED00F4B197 /* ProfileCreateView.swift */,
 				1530544A29A7835C0054623C /* LogInView.swift */,
 				1530544E29A790000054623C /* LoginDetail.swift */,
 				1530545029AF6DE50054623C /* MainPage.swift */,
 				1530545429AF933E0054623C /* PathView.swift */,
 				158A705C29B0EDB600B83574 /* SignUpView.swift */,
+				9151280F2A01110300C114CE /* MainView.swift */,
+				915128112A01116000C114CE /* SwipeView.swift */,
+				915128132A0111B300C114CE /* SwipeCardView.swift */,
+				915128152A0111ED00C114CE /* ProfileView.swift */,
+				915128172A01120700C114CE /* MemberView.swift */,
+				915128192A01122900C114CE /* MediaView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -246,13 +264,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1530545129AF6DE50054623C /* MainPage.swift in Sources */,
+				915128102A01110300C114CE /* MainView.swift in Sources */,
 				1530544F29A790000054623C /* LoginDetail.swift in Sources */,
+				9151281A2A01122900C114CE /* MediaView.swift in Sources */,
 				1530544B29A7835C0054623C /* LogInView.swift in Sources */,
+				915128182A01120700C114CE /* MemberView.swift in Sources */,
+				915128122A01116000C114CE /* SwipeView.swift in Sources */,
 				1530545529AF933E0054623C /* PathView.swift in Sources */,
 				1578B8FB29DB0DE900949914 /* MessagesManager.swift in Sources */,
 				15339A7029C8B3D100ADC425 /* Application_utility.swift in Sources */,
 				9163457229A8866800523378 /* Tag.swift in Sources */,
-				15CAAA55299E69ED00F4B197 /* ContentView.swift in Sources */,
+				15CAAA55299E69ED00F4B197 /* ProfileCreateView.swift in Sources */,
 				1578B8F729DB080E00949914 /* MessageField.swift in Sources */,
 				1578B8F529DB004700949914 /* MessageBubble.swift in Sources */,
 				15339A6929C8AA4D00ADC425 /* googleSignIn.swift in Sources */,
@@ -262,6 +284,8 @@
 				1578B8F929DB097E00949914 /* MainChatView.swift in Sources */,
 				9163457429A8868600523378 /* TagView.swift in Sources */,
 				1578B8F129DAF5FB00949914 /* TitleRow.swift in Sources */,
+				915128162A0111ED00C114CE /* ProfileView.swift in Sources */,
+				915128142A0111B300C114CE /* SwipeCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

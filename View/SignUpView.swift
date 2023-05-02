@@ -59,7 +59,7 @@ struct SignUpView: View {
             
             Spacer()
         
-                NavigationLink(destination: ContentView() ){
+                NavigationLink(destination: MainView() ){
                     Text("Continue")
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .font(.system(size: 20))
