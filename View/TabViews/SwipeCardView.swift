@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import Foundation
+import Firebase
 
 struct SwipeCardView: View {
-    var person: String
+    let db = Firestore.firestore()
+    let currentEmail = Auth.auth().currentUser?.email
+    var person: Person
     @State private var offset = CGSize.zero
     @State private var color: Color = .blue
     var body: some View {
@@ -21,8 +25,13 @@ struct SwipeCardView: View {
                     .foregroundColor(color.opacity(0.9))
                     .shadow(radius: 4)
                 
+                
                 HStack{
-                    Text(person)
+                    Text(person.name)
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                        .bold()
+                    Text(person.age)
                         .font(.largeTitle)
                         .foregroundColor(.white)
                         .bold()
@@ -79,12 +88,14 @@ struct SwipeCardView: View {
     func swipeCard(width: CGFloat){
         switch width {
         case -500...(-150):
-            print("\(person) removed")
+            print("\(person.name) removed")
             offset = CGSize(width: -500, height: 0)
             
         case 150...500:
-            print("\(person) added")
+            print("\(person.name) added")
             offset = CGSize(width: 500, height: 0)
+            addLike()
+            checkIfMacth()
             
         default:
             offset = .zero
@@ -104,9 +115,43 @@ struct SwipeCardView: View {
             
         }
     }
+    
+    func addLike() {
+       
+        if let currentEmail = Auth.auth().currentUser?.email {
+            db.collection("userProfiles").document(currentEmail).updateData(["likes": FieldValue.arrayUnion([person.id])]){ error in
+                if error == nil{
+                    
+                }
+            }
+        }
+        
+    }
+    func checkIfMacth() {
+    let currentEmail = "henrikwoodgates97@gmail.com"
+            if person.likes.contains(currentEmail){
+                //push it is a match to both users on firestore and remove them from their like pool
+                
+                db.collection("userProfiles").document(currentEmail).updateData(["Matches": FieldValue.arrayUnion([person.id])]){ error in
+                    if error == nil{
+                        
+                    }
+                }
+                // delete match from like array
+                db.collection("userProfiles").document(person.id).updateData(["Matches": FieldValue.arrayUnion([currentEmail])]){ error in
+                    if error == nil{
+                        
+                    }
+                }
+            }
+        
+            
+        
+    }
+        
 }
 struct SwipeCardView_Previews: PreviewProvider {
     static var previews: some View {
-        SwipeCardView(person: "Thomas")
+        SwipeCardView(person: Person(id: "202", name: "Henrik", age: "22", likes: ["test2", "test3"]))
     }
 }

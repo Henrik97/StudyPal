@@ -6,24 +6,30 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SwipeView: View {
     
-    private var people: [String] = ["Thomas", "Emma", "Carl", "Mike"].reversed()
+    @ObservedObject var model = PersonViewModel()
     
     var body: some View {
         
         NavigationStack{
             VStack{
                 ZStack {
-                    ForEach(people, id: \.self) {person in
-                        SwipeCardView(person: person)
+                    ForEach(model.users) {user in
+                        SwipeCardView(person: Person(id: user.id, name: user.name, age: user.age, likes: user.likes))
                     }
                 }
             }
         }
+       
+    }
+    init() {
+        model.getUserProfiles()
     }
     }
+
 
 struct SwipeView_Previews: PreviewProvider {
     static var previews: some View {

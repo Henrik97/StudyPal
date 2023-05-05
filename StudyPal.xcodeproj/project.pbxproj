@@ -36,6 +36,8 @@
 		915128162A0111ED00C114CE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915128152A0111ED00C114CE /* ProfileView.swift */; };
 		915128182A01120700C114CE /* MemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915128172A01120700C114CE /* MemberView.swift */; };
 		9151281A2A01122900C114CE /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915128192A01122900C114CE /* MediaView.swift */; };
+		915128492A050E6600C114CE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915128482A050E6600C114CE /* Person.swift */; };
+		9151284B2A050EA500C114CE /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9151284A2A050EA500C114CE /* PersonViewModel.swift */; };
 		9163457229A8866800523378 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9163457129A8866800523378 /* Tag.swift */; };
 		9163457429A8868600523378 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9163457329A8868600523378 /* TagView.swift */; };
 		9163457629ACF66400523378 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9163457529ACF66400523378 /* View.xib */; };
@@ -68,6 +70,8 @@
 		915128152A0111ED00C114CE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		915128172A01120700C114CE /* MemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberView.swift; sourceTree = "<group>"; };
 		915128192A01122900C114CE /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
+		915128482A050E6600C114CE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		9151284A2A050EA500C114CE /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
 		9163457129A8866800523378 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		9163457329A8868600523378 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		9163457529ACF66400523378 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 			children = (
 				15339A6829C8AA4D00ADC425 /* googleSignIn.swift */,
 				15339A6F29C8B3D100ADC425 /* Application_utility.swift */,
+				9151284A2A050EA500C114CE /* PersonViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 				9163457129A8866800523378 /* Tag.swift */,
 				1578B8F229DAFF5400949914 /* Message.swift */,
 				1578B8FA29DB0DE900949914 /* MessagesManager.swift */,
+				915128482A050E6600C114CE /* Person.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,6 +291,8 @@
 				9151281A2A01122900C114CE /* MediaView.swift in Sources */,
 				1530544B29A7835C0054623C /* LogInView.swift in Sources */,
 				915128182A01120700C114CE /* MemberView.swift in Sources */,
+				9151284B2A050EA500C114CE /* PersonViewModel.swift in Sources */,
+				915128492A050E6600C114CE /* Person.swift in Sources */,
 				915128122A01116000C114CE /* SwipeView.swift in Sources */,
 				1530545529AF933E0054623C /* PathView.swift in Sources */,
 				1578B8FB29DB0DE900949914 /* MessagesManager.swift in Sources */,
